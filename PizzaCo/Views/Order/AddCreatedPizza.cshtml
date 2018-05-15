@@ -1,0 +1,33 @@
+﻿@model PizzaCo.Models.Pizza
+
+@{
+    ViewBag.Title = "AddPizza";
+}
+
+<h2>AddPizza</h2>
+
+<div id="pizzaCard" class="card" style="width: 350px; display: inline-block; border: solid; border-color: lightgray; margin: 10px; background-color: whitesmoke">
+    @using (@Html.BeginForm("AddCreatedPizzaConfirmed", "Order", FormMethod.Post))
+    {
+        <div class="card-body">
+            <h3 class="card-title" style="margin-left: 40px">@Html.DisplayFor(modelItem => Model.Name)</h3>
+            <img class="card-img-top" src="~/Images/pizza0.png" width="200" height="150" alt="Card image cap" , style="margin-left: 75px">
+            <div id="pizzaDough" class="card-text">
+                <strong>Dough:</strong> @Html.DisplayFor(modelItem => Model.Dough.Name)
+            </div>
+            <div id="pizzaDoughType">
+                <strong>Dough Type:</strong> @Html.DisplayFor(modelItem => Model.DoughType.Name)
+            </div>
+            <div id="pizzaToppings">
+                <strong>Toppings:</strong> @Html.DisplayFor(modelItem => Model.ListOfToppings)
+            </div>
+
+            <div class="card-text" style="display: inline-block">
+                <strong>Price:</strong> $@Html.DisplayFor(modelItem => Model.Price)
+            </div>
+            <br />
+            <input type="submit" value="Add pizza" class="btn btn-danger" />
+        </div>
+
+    }
+</div>

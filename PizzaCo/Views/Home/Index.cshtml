@@ -1,0 +1,10 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron" id="homePage">
+    <h1>Pizza Co.</h1>
+    <p class="lead">Pizza Co. is online platform for ordering pizza. You are more than welcome to see our pizza or create one by your design.</p>
+    <div style="display: inline-block">@Html.ActionLink("Our Pizza", "Index", "Pizza", new { area = "" }, new { @class = "navbar-brand" }) &#127829;</div>
+    <div style="display: inline-block">@Html.ActionLink("Your Pizza", "CreatePizza", "Pizza", new { area = "" }, new { @class = "navbar-brand" }) &#127829;</div>
+</div>
